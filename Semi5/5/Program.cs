@@ -21,7 +21,6 @@ int[] GetArray(int size, int minValue, int maxValue)
     for (int i = 0; i < size; i++)
     {
         res[i] = new Random().Next(minValue, maxValue);
-    
     }
     return res;
 }
@@ -64,5 +63,4 @@ int [] NewArray(int [] arr)
     }
     }
     return new1;
-
 } 
