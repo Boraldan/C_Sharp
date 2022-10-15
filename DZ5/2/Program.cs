@@ -45,7 +45,7 @@ void PrintArr(int[] prA)
 
 int SumUnevenIndexArray(int [] ray) {
 int sum = 0;
-for (int i = 0; i < ray.Length; i=i+2)
+for (int i = 1; i < ray.Length; i=i+2)
 {    sum = sum + ray[i];    }
 return sum;  }
 
