@@ -52,7 +52,7 @@ void PrintArr(int[] a)     {                                ///  печать м
     Console.WriteLine("  "); }
 
 
-int Sun(int n) {                                            /// рекурси факториала N!
+int Sun(int n) {                                            /// рекурсия факториала N!
     if (n == 1) return 1;
     else  return n * Sun (n-1); }
     Console.WriteLine(Sun(5));
