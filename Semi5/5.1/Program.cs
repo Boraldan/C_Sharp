@@ -50,17 +50,15 @@ int [] NewArray(int [] arr)
     size = arr.Length/2 + 1;}
 
     int [] new1 = new int [size];  
-    
-    
+        
     for (int i = 0; i < size; i++) {
     
     if (i == (arr.Length - 1) - i)
     new1[i] = arr[i];
 
-    else 
+    else     
     new1[i] = arr[i] * arr [(arr.Length - 1) - i]; 
        
     }
-    
     return new1;
 } 
