@@ -6,9 +6,26 @@
 
 Console.Clear();     
 
-double b1 = 2, b2 = 4, k1 = 5, k2 = 9;
+Console.Write ("Введите значение b1: ");
+double b1 = EnterNum (); 
+ 
+Console.Write ("Введите значение b2: ");
+double b2 =  EnterNum (); 
+
+Console.Write ("Введите значение k1: ");
+double k1 = EnterNum (); 
+ 
+Console.Write ("Введите значение k2: ");
+double k2 =  EnterNum (); 
+
 Console.Write ("Точка пересечения  ");
 PrintArr(CrossLines(b1, b2, k1, k2));
+
+
+double EnterNum () {                                           /// ввод числа
+    double a = double.Parse(Console.ReadLine()!);
+    return a;     }
+
 
 double [] CrossLines (double b1, double b2, double k1, double k2) {
     double [] crossLines = new double[2];
