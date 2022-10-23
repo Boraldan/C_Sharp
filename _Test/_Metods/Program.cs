@@ -67,4 +67,21 @@ int [] HandArray(int N){                                    /// ручной в�
     return handArray; }
 
  
+bool IsEven (int value) {                                   /// проверка числа на четность через bool
+    return value % 2 == 0;
+}
+
+
+int  RandomIntNumber(int minValue, int maxValue)      // Random Double Number
+    {
+    int rnd  = new Random().Next(minValue, maxValue + 1);
+    return rnd;
+    }
+
  
+
+double  RandomDoubleNumber(int minValue, int maxValue)      // Random Double Number
+    {
+    double rnd = Math.Round(minValue + new Random().NextDouble() * (maxValue - minValue), 2);
+    return rnd;
+    }

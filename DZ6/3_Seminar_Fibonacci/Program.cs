@@ -11,7 +11,7 @@ Console.Clear();
 Fibonacci(EnterNum ());
 
 int EnterNum () {
-Console.Write("Введите число Фибоначи: ");
+Console.Write("Введите число Фибоначчи: ");
 int a = int.Parse(Console.ReadLine()!);
 return a; 
 }
@@ -23,6 +23,6 @@ void Fibonacci(int n) {
     Array.Resize(ref fibArr, n+2);  
     for (int i = 0; i < n; i++) {
     fibArr[i+2] = fibArr[i+1] + fibArr[i];  
-    Console.Write(fibArr[i] + ", ");   
+    Console.Write(fibArr[i] + ".  ");   
     
     } }
