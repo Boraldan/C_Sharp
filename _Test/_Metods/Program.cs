@@ -80,8 +80,8 @@ int  RandomIntNumber(int minValue, int maxValue)      // Random Double Number
 
  
 
-double  RandomDoubleNumber(int minValue, int maxValue)      // Random Double Number
+double  RandomDoubleNumber(int minValue, int maxValue, int round)      // Random Double Number
     {
-    double rnd = Math.Round(minValue + new Random().NextDouble() * (maxValue - minValue), 2);
+    double rnd = Math.Round(minValue + new Random().NextDouble() * (maxValue - minValue), round);
     return rnd;
     }
