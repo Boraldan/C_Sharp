@@ -24,14 +24,14 @@ Console.Write("Введите количество строк массива: ")
 int rows = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов массива: ");
 int columns = int.Parse(Console.ReadLine());
-int[,] array = GetArray(rows, columns, 0,10);
+int[,] array = GetArray(rows, columns, 0, 10);
 PrintArray(array);
 Console.WriteLine();
 
 // PrintArray(CountArray(array)); 
 // Console.WriteLine();
 
-PrintArray2(RedizArray(CountArray(array))); 
+RedizArray(CountArray(array)); 
 }
 
 int[,] GetArray(int m, int n, int minValue, int maxValue)
@@ -98,7 +98,7 @@ for (int i = 0; i < size1; i++)
 array = new_array;
 }
 
-int[,] RedizArray(int[,] inArray)
+void RedizArray(int[,] inArray)
 {   
     int[,] result = new int[2, 1];
     int iL = inArray.GetLength(0);
@@ -121,15 +121,11 @@ int[,] RedizArray(int[,] inArray)
     result[1,newSize] = inArray[1,i];
     }
     }
-    return result;
+    for (int i = 0; i < result.GetLength(1); i++)
+    {
+       Console.Write($"Элемент {result[0,i]} встречается в массиве {result[1,i]} раз");
+       Console.WriteLine();
+    }
     }
 
-void PrintArray2(int[,] inArray)
-{
-     for (int i = 0; i < inArray.GetLength(1); i++)
-    {
-        Console.Write($"Элемент {inArray[0,i]} встречается в массиве {inArray[1,i]} раз");
-    
-        Console.WriteLine();
-    }
-}
+ 
