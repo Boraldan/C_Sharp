@@ -15,7 +15,6 @@
 // 6 встречается 2 раза
 
 
-
 Main();
 
 void Main () {
@@ -24,7 +23,7 @@ Console.Write("Введите количество строк массива: ")
 int rows = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов массива: ");
 int columns = int.Parse(Console.ReadLine());
-int[,] array = GetArray(rows, columns, 0, 5);
+int[,] array = GetArray(rows, columns, 0, 10);
 PrintArray(array);
 Console.WriteLine();
 
@@ -122,6 +121,27 @@ void RedizArray(int[,] inArray)
     result[1,newSize] = inArray[1,i];
     }
     }
+
+    for (int i = 0; i < result.GetLength(1) - 1; i++)
+        {
+        int min = result[0,i];
+        int imin = i;
+        int temp;
+            for (int j = 1 + i; j < result.GetLength(1); j++)
+                {
+                if (result[0,j] < min) {
+                min = result[0,j];
+                imin = j; }
+                }      
+        temp = result[0,imin];
+        result[0,imin] = result[0,i];
+        result[0,i] = temp;
+                
+        temp = result[1,imin];
+        result[1,imin] = result[1,i];
+        result[1,i] = temp;
+        }
+    
     for (int i = 0; i < result.GetLength(1); i++)
     {
        Console.Write($"Элемент {result[0,i]} встречается в массиве {result[1,i]} раз");
