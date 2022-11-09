@@ -10,8 +10,8 @@ string M1(string text, char oldk, char newK)
     {
         if (text[i] == oldk)
         res = res + $"{newK}";
-         else
-         res = res + $"{text[i]}";
+        else
+        res = res + $"{text[i]}";
            
     }
     

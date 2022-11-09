@@ -21,7 +21,7 @@ int rowIndex = int.Parse(Console.ReadLine()!);
 Console.Write("Введите номер элемента в столбце: ");
 int columnIndex = int.Parse(Console.ReadLine()!);
 
-int [,] array = GetArray(rows, columns, -10, 10);
+int [,] array = GetArray(rows, columns, 0, 10);
 
 CheckIndex(array, rowIndex, columnIndex);
 

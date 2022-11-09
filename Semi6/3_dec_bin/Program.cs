@@ -21,18 +21,18 @@ int [] DecimalToBinary(int d) {
 
     int i = 0;
     while (d > 0) {
-    if (d%2 == 0) {
-    d = d/2;
-    arrBin[i] = 0;
-    i++; }
-    else {
-    d = (d-1)/2;
-    arrBin[i] = 1;
-    i++; 
-    }
-    Array.Resize(ref arrBin, i+1);
-    if (d == 0) Array.Resize(ref arrBin, i);
-    }
+        if (d%2 == 0) {
+        d = d/2;
+        arrBin[i] = 0;
+        i++; }
+        else {
+        d = (d-1)/2;
+        arrBin[i] = 1;
+        i++; 
+        }
+        Array.Resize(ref arrBin, i+1);
+        if (d == 0) Array.Resize(ref arrBin, i);
+        }
     return arrBin;
     }
 

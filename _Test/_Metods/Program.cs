@@ -2,12 +2,33 @@
 
 Console.Clear();                                            /// очистка консоли
 
+Console.Write("Введите имя: ");
+string? name = Console.ReadLine();
+ 
+Console.Write("Введите возраст: ");
+int age = Convert.ToInt32(Console.ReadLine());
+ 
+Console.Write("Введите рост: ");
+double height = Convert.ToDouble(Console.ReadLine());
+
+
 int EnterNum () {                                           /// ввод числа
     Console.Write("Введите первое число: ");
     int a = int.Parse(Console.ReadLine()!);
     return a;     }
 
 Array.Resize(ref inArray, N)                                /// изменение размера массива  
+
+void ResizeArray <T> (ref T[,] array, int size1, int size2)    /// изменение размера двумерного [ , ] массива 
+    {
+    T[,] new_array = new T[size1, size2];
+    size1 = Math.Min(array.GetLength(0), size1);
+    size2 = Math.Min(array.GetLength(1), size2);
+    for (int i = 0; i < size1; i++) {
+    for (int j = 0; j < size2; j++) new_array[i, j] = array[i, j];
+    }
+    array = new_array;
+    }
 
 int[] GetArray(int size, int minValue,int maxValue) {       /// создание произвольного массива
 
@@ -69,7 +90,7 @@ int [] HandArray(int N){                                    /// ручной в�
  
 bool IsEven (int value) {                                   /// проверка числа на четность через bool
     return value % 2 == 0;
-}
+    }
 
 
 int  RandomIntNumber(int minValue, int maxValue)      // Random Double Number
@@ -81,7 +102,14 @@ int  RandomIntNumber(int minValue, int maxValue)      // Random Double Number
  
 
 double  RandomDoubleNumber(int minValue, int maxValue, int round)      // Random Double Number
+
     {
     double rnd = Math.Round(minValue + new Random().NextDouble() * (maxValue - minValue), round);
     return rnd;
     }
+
+Символьные литералы                                         // Символьные литералы
+    '\n' - перевод строки
+    '\t' - табуляция
+    '\\' - слеш
+    \"   - ковычки    
