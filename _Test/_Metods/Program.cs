@@ -72,6 +72,21 @@ void PrintArr(int[] a)     {                                ///  печать м
     Console.Write (" ]");
     Console.WriteLine("  "); }
 
+void PrintArray(int[,,] inArray)                            // печать 3D массива
+    {
+     for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++) 
+        {
+            for (int k = 0; k < inArray.GetLength(2); k++)
+            {
+                Console.Write($"{inArray[i,j,k]} ({i},{j},{k}) ");
+            }
+        Console.WriteLine();
+        }
+    }
+    }
+
 
 int Sun(int n) {                                            /// рекурсия факториала N!
     if (n == 1) return 1;
@@ -113,3 +128,16 @@ double  RandomDoubleNumber(int minValue, int maxValue, int round)      // Random
     '\t' - табуляция
     '\\' - слеш
     \"   - ковычки    
+
+int FindNum(int [,,] d3Aray)                            // рекунсия по подбору неповторяющегося числа в массив
+    {
+    int N = new Random().Next(minValue,maxValue+1);
+    bool x = true;
+    foreach (int el in d3Aray)
+        {
+        if(el == N) x = false;    
+        }     
+            if (x==true) return N;
+            return FindNum (d3Aray);
+    }
+    
