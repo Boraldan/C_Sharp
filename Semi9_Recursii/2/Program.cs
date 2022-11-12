@@ -3,18 +3,19 @@
 // M = 1; N = 5 -> "1, 2, 3, 4, 5"
 // M = 4; N = 8 -> "4, 6, 7, 8"
 
+
+Main();
+
 void Main()
 {
     Console.Clear();
-    Console.WriteLine("Start");
     Console.Write("Введите натуральное число, от которого будет выводится последовательность: ");
     int start = GetNumber();
     Console.Write("Введите натуральное число, до которого будет выводится последовательность: ");
     int end = GetNumber();
     Console.WriteLine();
     ShowSubsequence(start, end);
-    Console.WriteLine();
-    Console.WriteLine("End");
+ 
 }
 
 int GetNumber()
@@ -27,9 +28,7 @@ int ShowSubsequence(int start, int end)
     if(start > end) return end;
 
     Console.Write($"{start} <- ");
-    //start = 3
-    //end = 10
-
+ 
     return ShowSubsequence(start + 1, end);
 }
-Main();
+
