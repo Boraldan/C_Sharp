@@ -17,11 +17,13 @@ int b = int.Parse(Console.ReadLine());
 Console.Write("Введите количество горизонталей массива: ");
 int c = int.Parse(Console.ReadLine());
 
-int[,,] array = GetArray(a, b, c, 10, 99);
+int[,,] array = GetArray(a, b, c, -1, 8);
 Console.WriteLine();
  
 PrintArray(array);
+
  
+
 
 }
 
