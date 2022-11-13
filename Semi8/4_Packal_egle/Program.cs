@@ -23,7 +23,7 @@ int [,] FillPascalArray (int numberRows)
 }
 
 
-///Метод печати массива Паскаля:
+// ///Метод печати массива Паскаля:
 void PrintPascalArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -34,6 +34,9 @@ void PrintPascalArray(int[,] array)
             }
             for (int j = 0; j < array.GetLength(1); j++)
             {
+                if (array[i, j] == 0) {}
+                else 
+                // Console.Write($"   {array[i, j]}");
                 Console.Write("{0,4}", array[i, j]);
             }
         Console.WriteLine();
@@ -44,3 +47,7 @@ int [,] array =  FillPascalArray(numberRows);
 Console.WriteLine();
 
 PrintPascalArray(array);
+ 
+
+
+ 
