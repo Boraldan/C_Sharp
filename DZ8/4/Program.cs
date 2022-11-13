@@ -17,12 +17,10 @@ int b = int.Parse(Console.ReadLine());
 Console.Write("Введите количество горизонталей массива: ");
 int c = int.Parse(Console.ReadLine());
 
-int[,,] array = GetArray(a, b, c, -1, 8);
+int[,,] array = GetArray(a, b, c, 0, 10);
 Console.WriteLine();
  
 PrintArray(array);
-
- 
 
 
 }
@@ -30,6 +28,18 @@ PrintArray(array);
 int[,,] GetArray(int m, int n, int l, int minValue, int maxValue)  
     {
     int[,,] result = new int[m, n, l];
+
+    for (int i = 0; i < result.GetLength(0); i++)
+    {
+        for (int j = 0; j <result.GetLength(1); j++)
+          {  
+            for (int k = 0; k < result.GetLength(2); k++)
+            {
+                result[i,j,k] = minValue - 1;
+            }
+          } 
+    }
+
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)

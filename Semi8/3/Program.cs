@@ -23,12 +23,12 @@ Console.Write("Введите количество строк массива: ")
 int rows = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов массива: ");
 int columns = int.Parse(Console.ReadLine());
-int[,] array = GetArray(rows, columns, 0, 10);
+int[,] array = GetArray(rows, columns, -10, 10);
 PrintArray(array);
 Console.WriteLine();
 
-// PrintArray(CountArray(array)); 
-// Console.WriteLine();
+PrintArray(CountArray(array)); 
+Console.WriteLine();
 
 RedizArray(CountArray(array)); 
 }
@@ -124,13 +124,16 @@ void RedizArray(int[,] inArray)
 
     for (int i = 0; i < result.GetLength(1) - 1; i++)
         {
-        int min = result[0,i];
+        // int min = result[0,i];    Можно обойтись без минимума, просто сохраняя индекс ячейки с минимальным значением. 
         int imin = i;
         int temp;
             for (int j = 1 + i; j < result.GetLength(1); j++)
                 {
-                if (result[0,j] < min) {
-                min = result[0,j];
+                // if (result[0,j] < min) { Можно обойтись без минимума, просто сохраняя индекс ячейки с минимальным значением.
+                // min = result[0,j]; 
+                if (result[0,j] < result[0,imin]) {
+                
+
                 imin = j; }
                 }      
         temp = result[0,imin];
