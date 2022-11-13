@@ -2,6 +2,7 @@
 // N = 5 -> "4, 2"
 // N = 8 -> "8, 6, 4, 2,"
 
+
 Console.Clear();
 Console.Write("Введите число: ");
 int a = int.Parse(Console.ReadLine());
@@ -16,13 +17,12 @@ int EvNum(int n)
         return n;}
 
     if(n%2 != 0) 
-    {   n--;
-        Console.Write($"{n}, ");
+    {  
+        Console.Write($"{--n}, ");
         return EvNum(n-2);
     }
     
     Console.Write($"{n}, ");
     return EvNum(n-2);
-}
-       
+}   
        
