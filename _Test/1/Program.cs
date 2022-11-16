@@ -1,24 +1,10 @@
-﻿ 
-
-Console.Clear();
-Console.Write("Введите число: ");
-int a = int.Parse(Console.ReadLine());
-
-
-EvNum(a);
-
-int EvNum(int n)
+﻿Person tom = new Person { name = "Tom", age = 22 };
+ 
+tom.Print();    // Имя: Tom  Возраст: 22
+ 
+struct Person
 {
-    if(n==2) {
-        Console.Write($"{n}, ");
-        return n;}
-
-    if(n%2 != 0) 
-    {  
-        Console.Write($"{--n}, ");
-        return EvNum(n-2);
-    }
-    
-    Console.Write($"{n}, ");
-    return EvNum(n-2);
+    public string name;
+    public int age;
+    public void Print() => Console.WriteLine($"Имя: {name}  Возраст: {age}");
 }
