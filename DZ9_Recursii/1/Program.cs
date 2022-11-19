@@ -16,13 +16,16 @@ int EvNum(int n)
         Console.Write($"{n}, ");
         return n;}
 
-    if(n%2 != 0) 
-    {  
-        Console.Write($"{--n}, ");
-        return EvNum(n-2);
-    }
+    // if(n%2 != 0)    // меняем эту проверку на: n = (n/2)*2
+    // {  
+    //     Console.Write($"{--n}, ");
+    //     return EvNum(n-2);
+    // }
     
-    Console.Write($"{n}, ");
+    // Console.Write($"{n}, ");
+
+    Console.Write($"{n = (n/2)*2}, ");
+
     return EvNum(n-2);
 }   
        
